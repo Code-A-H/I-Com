@@ -17,7 +17,16 @@ if(isset($_POST["btningresar"]))
 	}else
 	{
 		echo "<script> alert('Usuario no existe'); window.location='index.html' </script>";
-	}
+    }
+    /**
+     * if($nr==1)
+	* {
+	* 	echo "<script> alert('Bienvenido $nombre'); window.location='principal.html' </script>";
+	* }else
+	* {
+	* 	echo "<script> alert('Usuario no existe'); window.location='index.html' </script>";
+	* }
+     */
 }
 
 //Registrar
@@ -27,7 +36,7 @@ if(isset($_POST["btnregistrar"]))
 	
 	if(mysqli_query($conn,$sqlgrabar))
 	{
-		echo "<script> alert('Usuario registrado con exito: $nombre'); window.location='index.html' </script>";
+		echo "<script> alert('Usuario registrado con exito: $nombre'); window.location='login.html' </script>";
 	}else 
 	{
 		echo "Error: ".$sql."<br>".mysql_error($conn);
