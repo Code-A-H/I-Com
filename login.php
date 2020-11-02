@@ -14,7 +14,7 @@ if(isset($_POST["btnIngresar"]))
 	
 	if($nr==1)
 	{
-		echo "<script> alert('Bienvenido $nombre'); </script>";
+		echo "<script> alert('Bienvenido $nombre'); window.location='principal.html' </script>";
 	}else
 	{
 		echo "<script> alert('Usuario no existe'); </script>";
