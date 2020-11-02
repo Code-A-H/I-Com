@@ -3,7 +3,7 @@
 include("conexion.php");
 
 $nombre = $_POST["usuario"];
-$pass   = $_POST["pass"];
+$pass   = $_POST["contraseña"];
 
 //Login
 if(isset($_POST["btningresar"]))
