@@ -18,7 +18,7 @@ if(isset($_POST["btnIngresar"]))
 	}else
 	{
 		echo "<script> alert('Usuario no existe'); </script>";
-    }
+    }///y
 
 }else{
     
