@@ -8,7 +8,7 @@ $pass   = $_POST["contraseña"];
 //Login
 if(isset($_POST["btningresar"]))
 {
-	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '$nombre' AND password='$pass'");
+	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '$nombre' AND contraseña='$pass'");
 	$nr = mysqli_num_rows($query);
 	
 	if($nr==1)
@@ -18,15 +18,7 @@ if(isset($_POST["btningresar"]))
 	{
 		echo "<script> alert('Usuario no existe'); </script>";
     }
-    /**
-     * if($nr==1)
-	* {
-	* 	echo "<script> alert('Bienvenido $nombre'); window.location='principal.html' </script>";
-	* }else
-	* {
-	* 	echo "<script> alert('Usuario no existe'); window.location='index.html' </script>";
-	* }
-     */
+
 }else{
     
 }
