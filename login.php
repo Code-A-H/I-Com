@@ -6,7 +6,7 @@ $nombre = $_POST["usuario"];
 $pass   = $_POST["contraseña"];
 
 //Login
-if(isset($_POST["btningresar"]))
+if(isset($_POST["btnIngresar"]))
 {
 	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '$nombre' AND contraseña='$pass'");
 	$nr = mysqli_num_rows($query);
@@ -25,7 +25,7 @@ if(isset($_POST["btningresar"]))
 }
 
 //Registrar
-if(isset($_POST["btnregistrar"]))
+if(isset($_POST["btnRegistrar"]))
 {
 	$sqlgrabar = "INSERT INTO login(usuario,contraseña) values ('$nombre','$pass')";
 	
