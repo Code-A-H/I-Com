@@ -1,1 +1,35 @@
-a
+<!--
+Crear un login y una página para registrar a un nuevo usuario con los siguientes datos:
+usuario y contraseña.
+
+
+(index.html) Login 	  -> Si el usuario existe 	 -> principal.html
+(index.html) Login    -> Si el usuario no existe -> (index.html) Login
+ registrar.html       -> Nuevo usuario           -> (index.html) Login
+
+El login tendrá la opción para registrar.
+Usar "estilos.css" en el ejercicio.
+
+-->
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Registrar</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+<form action="login_registrar.php" method="POST">
+<h2>Crear una cuenta</h2>
+<input type="text" placeholder="&#128273; Usuario" name="usuario" required>
+<input type="password" placeholder="&#128274; Contraseña" name="pass" required>
+<input type="submit" value="Registrar" name="btnregistrar">
+
+<br>
+<a href="index.html" style="float:right">Regresar</a>
+
+</form>
+</body>
+</html>
