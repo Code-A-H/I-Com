@@ -3,12 +3,12 @@
 include("conexion.php");
 
 $nombre = $_POST["usuario"];
-$pass   = $_POST["contraseña"];
+$contraseña   = $_POST["contraseña"];
 
 //Login
 if(isset($_POST["btnIngresar"]))
 {
-	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '$nombre' AND contraseña='$pass'");
+	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '$nombre' AND contraseña='$contraseña'");
 	$nr = mysqli_num_rows($query);
 	echo "<script> alert('Bienvenido'); </script>";
 	
@@ -27,7 +27,7 @@ if(isset($_POST["btnIngresar"]))
 //Registrar
 if(isset($_POST["btnRegistrar"]))
 {
-	$sqlgrabar = "INSERT INTO login(usuario,contraseña) values ('$nombre','$pass')";
+	$sqlgrabar = "INSERT INTO login(usuario,contraseña) values ('$nombre','$contraseña')";
 	
 	if(mysqli_query($conn,$sqlgrabar))
 	{
