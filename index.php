@@ -1,1 +1,4 @@
-fg
+<?php
+$hola = "text";
+
+?>
