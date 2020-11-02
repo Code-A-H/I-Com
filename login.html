@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-    <form method="post" action="index.php">
+<form action="login_registrar.php" method="POST">
+<h2>Iniciar sesión</h2>
+<input type="text" placeholder="&#128273; Usuario" name="usuario" required>
+<input type="password" placeholder="&#128274; Contraseña" name="pass" required>
+<input type="submit" value="Ingresar" name="btningresar">
 
-        <table>
-            <tr><td colspan="2"><label>Login</label></td></tr>
-            <tr></tr>
+<br>
+<a href="registrar.html" style="float:right">Crear una cuenta</a>
 
-        </table>
-
-
-    </form>
+</form>
 </body>
 </html>
