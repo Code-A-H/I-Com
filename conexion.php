@@ -1,28 +1,14 @@
-<!--
-Crear un login y una página para registrar a un nuevo usuario con los siguientes datos:
-usuario y contraseña.
-
-
-(index.html) Login 	  -> Si el usuario existe 	 -> principal.html
-(index.html) Login    -> Si el usuario no existe -> (index.html) Login
- registrar.html       -> Nuevo usuario           -> (index.html) Login
-
-El login tendrá la opción para registrar.
-Usar "estilos.css" en el ejercicio.
-
--->
-
 <?php
 
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "i-com";
+global $host,$user,$pass,$database;
 
-$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+$host='pdb49.awardspace.net';
 
-if(!$conn)
-{
-	die("No hay conexion:" .mysqli_connect_error());
-}
+$user="3359174_icom";
+$pass="psplus10";
+$database="3359174_icom";
+
+@$link=mysqli_connect($host,$user,$pass) or die ("Conexion Mala");
+mysqli_select_db($link,$database) or die ("error");
+
 ?>
