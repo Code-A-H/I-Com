@@ -7,9 +7,8 @@ $contraseña   = $_POST["contraseña"];
 
 if(isset($_POST["btnIngresar"]))
 {
-	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '$nombre' AND contraseña='$contraseña'");
+	$query = mysqli_query($conexion,"SELECT * FROM login WHERE usuario = '$nombre' AND contrasena='$contraseña'");
 	$nr = mysqli_num_rows($query);
-	echo "<script> alert('Bienvenido'); </script>";
 	
 	if($nr==1)
 	{
