@@ -17,7 +17,7 @@ Usar "estilos.css" en el ejercicio.
     <head>
         <meta charset="UTF-8">
         <title>Registrar</title>
-        <!--<link rel="stylesheet" href="estilos.css">-->
+        <link rel="stylesheet" href="RegistrarDiseño.css">
         <script src="Registrar.js"></script>
     </head>
 
@@ -29,10 +29,17 @@ Usar "estilos.css" en el ejercicio.
             <br>
             <label>Estudiante</label>
             <input type="checkbox" name="Estudiante" onclick="desplegarEst(this)">
-            <!--dest-->
+            <div id="DataEst">
+                <label>Correo institucional: </label>
+                <input type="email" name="EstEmail" placeholder="&#127891;example@institution.com">
+            </div>
             <br>
             <label>Trabajo</label>
             <input type="checkbox" name="Trabajo" onclick="desplegarTrab(this)">
+            <div id="DataTra">
+                <label>Correo empresarial: </label>
+                <input type="email" name="TraEmail" placeholder="&#128188;example@empresa.com">
+            </div>
             <br>
             <input type="submit" value="Registrar" name="btnRegistrar">
         </form>
