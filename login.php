@@ -21,7 +21,7 @@ if(isset($_POST["btnIngresar"]))
     }///y
 
 }else{
-    
+    //
 }
 
 //Registrar
