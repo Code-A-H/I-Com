@@ -5,16 +5,19 @@ $nombre = $_POST["usuario"];
 $contraseña = $_POST["contraseña"];
 $Estudiante = $_POST["Estudiante"];
 $Trabajo = $_POST["Trabajo"];
-
+$CEst=null;
+$CTra=null;
 if(isset($_POST["btnRegistrar"]))
 {
     if($Estudiante=="on"){
         $Est = true;
+        $CEst = $_POST["EstEmail"];
     }else{
         $Est = false;
     }
     if($Trabajo=="on"){
         $Tra = true;
+        $CTra = $_POST["TraEmail"];
     }else{
         $Tra = false;
     }
@@ -27,7 +30,8 @@ if(isset($_POST["btnRegistrar"]))
     if($text==$nombre){
         echo "<script>alert('Error: el usuario ya existe'); window.location='registrar.html' </script>";
     }else{
-        $sqlComands = "INSERT INTO login(usuario,contraseña,Estudiante,Trabajo) values ('$nombre','$contraseña','$Est','$Tra')";
+        $sqlComands = "INSERT INTO login(usuario,contraseña,Estudiante,C_Institucional,Trabajo,C_Empresarial) 
+        values ('$nombre','$contraseña','$Est','$CEst','$Tra','$CTra')";
 	
 	    if(mysqli_query($conn,$sqlComands))
 	    {
