@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2020 a las 18:20:31
+-- Tiempo de generación: 03-11-2020 a las 21:39:48
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -28,10 +28,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `login` (
+  `EstadoDeConexion` tinyint(1) NOT NULL,
   `usuario` varchar(20) NOT NULL,
   `contraseña` varchar(20) NOT NULL,
   `Estudiante` tinyint(1) NOT NULL,
-  `Trabajo` tinyint(1) NOT NULL
+  `C_Institucional` varchar(40) DEFAULT NULL,
+  `Trabajo` tinyint(1) NOT NULL,
+  `C_Empresarial` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
 
