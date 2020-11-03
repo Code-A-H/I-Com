@@ -5,7 +5,6 @@ include("conexion.php");
 $nombre = $_POST["usuario"];
 $contraseña   = $_POST["contraseña"];
 
-//Login
 if(isset($_POST["btnIngresar"]))
 {
 	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '$nombre' AND contraseña='$contraseña'");
@@ -23,9 +22,4 @@ if(isset($_POST["btnIngresar"]))
 }else{
     //
 }
-
-//Registrar
-
-
-
 ?>
