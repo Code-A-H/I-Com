@@ -14,22 +14,29 @@ Usar "estilos.css" en el ejercicio.
 
 <html>
 
-<head>
-<meta charset="UTF-8">
-<title>Registrar</title>
-<link rel="stylesheet" href="estilos.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registrar</title>
+        <!--<link rel="stylesheet" href="estilos.css">-->
+        <script src="Registrar.js"></script>
+    </head>
 
-<body>
-<form action="login.php" method="POST">
-<h2>Crear una cuenta</h2>
-<input type="text" placeholder="&#128273; Usuario" name="usuario" required>
-<input type="password" placeholder="&#128274; Contraseña" name="contraseña" required>
-<input type="submit" value="Registrar" name="btnRegistrar">
-
-<br>
-<a href="index.html" style="float:right">Regresar</a>
-
-</form>
-</body>
+    <body>
+        <form action="Registrar.php" method="POST">
+            <h2>Crear una cuenta</h2>
+            <input type="text" placeholder="&#128273; Usuario" name="usuario" required>
+            <input type="password" placeholder="&#128274; Contraseña" name="contraseña" required>
+            <br>
+            <label>Estudiante</label>
+            <input type="checkbox" name="Estudiante" onclick="desplegarEst(this)">
+            <!--dest-->
+            <br>
+            <label>Trabajo</label>
+            <input type="checkbox" name="Trabajo" onclick="desplegarTrab(this)">
+            <br>
+            <input type="submit" value="Registrar" name="btnRegistrar">
+        </form>
+        <br>
+        <a href="index.html" style="float:right">Regresar</a>
+    </body>
 </html>

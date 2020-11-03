@@ -25,18 +25,7 @@ if(isset($_POST["btnIngresar"]))
 }
 
 //Registrar
-if(isset($_POST["btnRegistrar"]))
-{
-	$sqlgrabar = "INSERT INTO login(usuario,contraseña) values ('$nombre','$contraseña')";
-	
-	if(mysqli_query($conn,$sqlgrabar))
-	{
-		echo "<script> alert('Usuario registrado con exito: $nombre'); window.location='index.html' </script>";
-	}else 
-	{
-		echo "Error: ".$sql."<br>".mysql_error($conn);
-	}
-}
+
 
 
 ?>
