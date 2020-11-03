@@ -1,0 +1,7 @@
+#DataEst, #DataTra{
+    position: relative;   
+    font:normal 0.8em arial;  
+    padding: 0.2em 0.5em ; 
+    display: none;
+    min-width: 200px;
+}
