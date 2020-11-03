@@ -16,34 +16,44 @@ Usar "estilos.css" en el ejercicio.
 
     <head>
         <meta charset="UTF-8">
-        <title>Registrar</title>
+        <title>I-COM</title>
         <link rel="stylesheet" href="RegistrarDiseño.css">
         <script src="Registrar.js"></script>
     </head>
 
     <body>
+        <div class="contenedor"></div>
+        <div class="inner1">
+            <img src="I-COM.gif" alt="Funny image"> 
+        </div>
+        <div class="inner2">
         <form action="Registrar.php" method="POST">
-            <h2>Crear una cuenta</h2>
+            
+            
+            <h2 id="tit">Crear una cuenta</h2>
             <input type="text" placeholder="&#128273; Usuario" name="usuario" required>
             <input type="password" placeholder="&#128274; Contraseña" name="contraseña" required>
-            <br>
-            <label>Estudiante</label>
+            <br><br>
+            <label class="dat">Estudiante</label>
             <input type="checkbox" name="Estudiante" onclick="desplegarEst(this)">
+            <br><br>
             <div id="DataEst">
-                <label>Correo institucional: </label>
+                <label class="dat3">Correo institucional: </label>
                 <input type="email" name="EstEmail" placeholder="&#127891;example@institution.com">
             </div>
             <br>
-            <label>Trabajo</label>
+            <label class="dat">Trabajo</label>
             <input type="checkbox" name="Trabajo" onclick="desplegarTrab(this)">
+            <br><br>
             <div id="DataTra">
-                <label>Correo empresarial: </label>
+                <label class="dat3">Correo empresarial: </label>
                 <input type="email" name="TraEmail" placeholder="&#128188;example@empresa.com">
             </div>
-            <br>
-            <input type="submit" value="Registrar" name="btnRegistrar">
+            <br><br>
+            <input class="btnReg" type="submit" value="Registrar" name="btnRegistrar">
         </form>
         <br>
-        <a href="index.html" style="float:right">Regresar</a>
+        <a class="dat2" href="index.html">Regresar</a>
+        </div>
     </body>
 </html>

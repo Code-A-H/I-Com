@@ -5,3 +5,53 @@
     display: none;
     min-width: 200px;
 }
+
+body{
+
+    background-color: rgb(40, 40, 40);
+}
+
+.inner1{
+    width:55%;
+    margin-right:2%;
+    float: left;
+}
+
+.inner1 img{
+    width:85%;
+}
+
+.inner2 {
+    width:42%;
+    float: left;
+    margin-top: 10%;
+}
+
+h2#tit{
+    color: seashell;
+    margin-left: 15%;
+}
+
+.dat{
+    color: seashell;
+    margin-left: 25%;
+}
+
+.dat2{
+    color: seashell;
+    margin-left: 26%;
+}
+
+.dat3{
+    color: palegoldenrod;
+}
+
+.inner2 a#registrarBtn{
+    color: seashell;
+    margin-left: 28%;
+}
+
+.btnReg{
+    margin-left: 25%;
+}
+
