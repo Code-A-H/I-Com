@@ -11,6 +11,15 @@ nav{
     min-width: 200px;
     min-height: 40px;
     background-color: aquamarine;
+    padding: 5px;
+
+}
+nav, a{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+nav, a:hover{
+    color: rgb(61, 61, 61);
 }
 #volverBtn{
     float:left;
