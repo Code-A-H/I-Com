@@ -3,9 +3,14 @@ body{
 }
 header{
     border-radius: 10px;
-    background-color: aqua;
+    background-color: crimson;
     width: 200px;
     height: 50px;
+}
+nav{
+    min-width: 200px;
+    min-height: 40px;
+    background-color: aquamarine;
 }
 #volverBtn{
     float:left;
