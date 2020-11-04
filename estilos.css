@@ -5,6 +5,10 @@ body{
     background-color: rgb(40, 40, 40);
 }
 
+.let, #perfilImagen{
+    color:white;
+}
+
 .inner1{
     width:55%;
     margin-right:2%;
