@@ -5,6 +5,15 @@ body{
     background-color: rgb(40, 40, 40);
 }
 
+.let, #fileImg{
+    color:white;
+}
+
+form p{
+    color: red;
+    position: initial;
+}
+
 .inner1{
     width:55%;
     margin-right:2%;

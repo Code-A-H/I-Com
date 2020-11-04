@@ -13,7 +13,9 @@ if(isset($_POST["btnIngresar"]))
 	if($nr==1)
 	{
 		$est=true;
-		$query = mysqli_query($conn, "UPDATE login SET EstadoDeConexion = '$est'");
+		$queri = "UPDATE login SET EstadoDeConexion = '$est' WHERE usuario = '$nombre'";
+		$conexion -> query($queri);
+		$queriNum = mysqli_num_rows($queri);
 		echo "<script> alert('Bienvenido $nombre'); window.location='principal.html' </script>";
 	}else
 	{
