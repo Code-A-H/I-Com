@@ -14,16 +14,18 @@ if(isset($_POST["actualizarInfo"])){
         $insertar = $conexion -> query("INSERT into profile_pictures(nombre,extension,archivo) 
         values('$perfil_Foto','$perfil_Foto_Tipo','$perfil_FotoData')");
         if($insertar){
-            echo("<script> alert('ok') </script>");
+            echo("<script> alert('ok'); window.location='PerfilConf.html'</script>");
         }else{
-            echo("<script> alert('error con la integracion') </script>");
+            echo("<script> alert('error con la integracion'); </script>");
         }
         
     }else{
-        echo("<script> alert('no foto') </script>");
+        echo("<script> alert('no foto'); window.location='PerfilConf.html'</script>");
     }
-}else{
-    echo("<script> alert('error') </script>");
+}
+if(isset($_POST["ver"])){
+    echo("<script> alert('nice'); window.location='PerfilConf.html'</script>");
+
 }
 
 ?>
