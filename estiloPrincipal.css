@@ -10,19 +10,55 @@ header{
     padding-left: 5px;
     padding-right: 5px;
 }
-nav{
-    min-width: 200px;
-    min-height: 40px;
-    background-color: aquamarine;
-    padding: 5px;
 
+nav#principal{
+    color: white;
+    background: rgb(207, 67, 162);
+    border-radius: 0.25em;
+    display: inline-block;
+    margin: 0.25em auto;
+    max-width: 1290px;
+    min-height: 30px;
+    padding: 0.25em;
+    text-align: center;
+    vertical-align: top;
+    width:98%;
+    text-decoration: none;
 }
-nav, a{
-    padding-left: 5px;
-    padding-right: 5px;
+
+.inicio{
+    width:50%;
+    margin-right:2%;
 }
-nav, a:hover{
-    color: rgb(61, 61, 61);
+
+.inicio a img{
+    width:30%;
+    margin-left:80%;
+}
+
+.botones{
+    float:left;
+    width:19.83%;
+    margin-left: -20%;
+	min-height:18px;
+    background: rgb(207, 67, 162);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 35px;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin:0px 0px;
+    text-decoration: none;
+    list-style:none;
+}
+
+a .botones:hover{
+    background:  rgb(4, 226, 255);
+}
+
+a .botones:active{
+    background: #00194B;
 }
 #volverBtn{
     float:left;
