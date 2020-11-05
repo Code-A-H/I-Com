@@ -14,6 +14,10 @@ if(isset($_POST["actualizarInfo"])){
         $insertar = $conexion -> query("INSERT into profile_pictures(nombre,extension,archivo) 
         values('$perfil_Foto','$perfil_Foto_Tipo','$perfil_FotoData')");
         if($insertar){
+            $insertar = mysqli_query($conexion,"SELECT * FROM profile_pictures WHERE nombre = '$perfil_Foto'");
+            $insertar = mysqli_fetch_array($insertar);
+            $ImgCod = $insertar["ImgCodigo"];
+            $insertar = $conexion -> query("UPDATE login SET CodPerfil = '$ImgCod' WHERE usuario = 'harvys'");
             echo("<script> alert('ok'); window.location='PerfilConf.html'</script>");
         }else{
             echo("<script> alert('error con la integracion'); </script>");
