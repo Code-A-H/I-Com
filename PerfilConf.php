@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include("conexion.php");
 
 
@@ -57,8 +57,11 @@ if(isset($_POST["actualizarInfo"])){
     //
     $est=true;
 	$queri = "UPDATE login SET EstadoDeConexion = '$est' WHERE usuario = '$user'";
-	$conexion -> query($queri);
-    echo("<script> window.location='principal.html'</script>");
+    $conexion -> query($queri);
+    //
+    $_SESSION['Usuario'] = $nombre;
+    //
+    echo("<script> window.location='principal.php'</script>");
     exit;
 }
 if(isset($_POST["ver"])){

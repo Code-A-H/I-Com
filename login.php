@@ -1,9 +1,11 @@
 <?php
-
+session_start();
 include("conexion.php");
 
 $nombre = $_POST["usuario"];
 $contraseña   = $_POST["contraseña"];
+
+
 
 if(isset($_POST["btnIngresar"]))
 {
@@ -17,12 +19,14 @@ if(isset($_POST["btnIngresar"]))
 		
 		$query = mysqli_fetch_array($query);
 		$CP = $query["CodPerfil"];
+		
 		if($CP==null) header("Location: PerfilConf.php?usuar=".$nombre);
 		else {
 			$est=true;
 			$queri = "UPDATE login SET EstadoDeConexion = '$est' WHERE usuario = '$nombre'";
 			$conexion -> query($queri);
-			header("Location: principal.html");
+			$_SESSION['Usuario'] = $nombre;
+			header("Location: principal.php");
 		}
 
 		//header("Location: PerfilConf.php?usuario=".$nombre);
