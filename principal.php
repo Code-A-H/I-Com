@@ -1,10 +1,17 @@
 <?php
-
+session_start();
+$temp = $_SESSION['Usuario'];
+if(empty($temp)){
+    echo "<script> alert('Sesion no detectada'); window.location='index.html'</script>";
+}else{
+    echo "<script> alert('Bienbenido $temp'); </script>";
+}
+//echo "<script> alert('$temp');</script>"
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
 
-
-<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -34,6 +41,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hobby">Hobbys</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nosotros">Historia</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Equipo</a></li>
+
                         <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contactanos</a></li>-->
                         <li class="nav-item">
                             <a class="nav-item dropdown-toggle active nav-link" data-toggle="dropdown" data-target="desplegable" href="#">
