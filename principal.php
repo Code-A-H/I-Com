@@ -49,7 +49,7 @@ if(empty($temp)){
                             </a>
                             <div class="dropdown-menu">
                                 <a class="nav-link2 js-scroll-trigger" href="#contact">&nbsp&nbsp&nbspContactanos&nbsp&nbsp&nbsp</a>
-                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                                <a class="dropdown-item" href="CerrarSesion.php">Cerrar Sesion</a>
                             </div>
                         </li>
                     </ul>
