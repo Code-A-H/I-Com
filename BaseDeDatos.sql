@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-11-2020 a las 23:29:40
+-- Tiempo de generación: 06-11-2020 a las 22:41:00
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -28,11 +28,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `infousuario` (
-  `idInfo` int(14) NOT NULL,
+  `idInfo` int(55) NOT NULL,
   `nombre` varchar(40) NOT NULL,
   `apellido` varchar(40) NOT NULL,
-  `nombre2` varchar(40) NOT NULL,
-  `apellido2` varchar(40) NOT NULL
+  `nombre2` varchar(40) DEFAULT NULL,
+  `apellido2` varchar(40) DEFAULT NULL,
+  `Telefono` int(13) DEFAULT NULL,
+  `fechaNacimiento` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -49,7 +51,7 @@ CREATE TABLE `login` (
   `C_Institucional` varchar(40) DEFAULT NULL,
   `Trabajo` tinyint(1) NOT NULL,
   `C_Empresarial` varchar(40) DEFAULT NULL,
-  `CodImgPerfil` int(14) DEFAULT NULL
+  `CodPerfil` int(14) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -59,7 +61,7 @@ CREATE TABLE `login` (
 --
 
 CREATE TABLE `profile_pictures` (
-  `ImgCodigo` int(11) NOT NULL,
+  `ImgCodigo` int(30) NOT NULL,
   `nombre` varchar(20) NOT NULL,
   `extension` varchar(12) NOT NULL,
   `archivo` longblob NOT NULL,
@@ -87,16 +89,10 @@ ALTER TABLE `profile_pictures`
 --
 
 --
--- AUTO_INCREMENT de la tabla `infousuario`
---
-ALTER TABLE `infousuario`
-  MODIFY `idInfo` int(14) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `profile_pictures`
 --
 ALTER TABLE `profile_pictures`
-  MODIFY `ImgCodigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ImgCodigo` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
