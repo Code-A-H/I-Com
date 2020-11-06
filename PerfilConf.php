@@ -21,8 +21,6 @@ if(isset($_POST["actualizarInfo"])){
             
             $insertar = $conexion -> query("UPDATE login SET CodPerfil = '$ImgCod' WHERE usuario = '$user'");
             
-            echo("<script> window.location='principal.html'</script>");
-            exit;
         }else{
             echo("<script> alert('error con la integracion'); </script>");
         }
@@ -56,11 +54,15 @@ if(isset($_POST["actualizarInfo"])){
 
     $insertar = $conexion -> query("INSERT into infousuario(idInfo,nombre,apellido,nombre2,apellido2,Telefono)
     values('$ImgCod','$nombre','$apellido','$nombre2','$apellido2','$telefono')");
+    //
+    $est=true;
+	$queri = "UPDATE login SET EstadoDeConexion = '$est' WHERE usuario = '$user'";
+	$conexion -> query($queri);
     echo("<script> window.location='principal.html'</script>");
     exit;
 }
 if(isset($_POST["ver"])){
-    echo("<script> alert('nice'); window.location='PerfilConf.html'</script>");
+    //echo("<script> alert('nice'); window.location='PerfilConf.html'</script>");
 
 }
 
