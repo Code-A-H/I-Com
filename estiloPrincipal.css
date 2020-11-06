@@ -1,17 +1,45 @@
 body{
-    background-color: white;
-}
-header{
-    border-radius: 10px;
-    background-color: crimson;
-    width: 200px;
-    height: 50px;
-    padding: 4px;
-    padding-left: 5px;
-    padding-right: 5px;
+    background-color:white;
 }
 
-nav#principal{
+.inner1{
+    width:50%;
+    margin-left: -2em;
+    margin-top: 4em;
+    float: left;
+}
+
+.inner2{
+    width:15%;
+    float: left;
+    margin-left: -5%;
+    
+}
+
+.inner2 img{
+    width:100%;
+}
+
+.inner3{
+    width:45%;
+    margin-top: -10.5%;
+    float: right;
+    margin-right: 1%;
+}
+
+.colegio{
+    width:50%;
+    margin-top: 4em;
+    float: left;
+}
+
+.hobby{
+    width:50%;
+    margin-top: 4em;
+    float: left;
+}
+
+/*div#principal{
     color: white;
     background: rgb(207, 67, 162);
     border-radius: 0.25em;
@@ -22,9 +50,12 @@ nav#principal{
     padding: 0.25em;
     text-align: center;
     vertical-align: top;
-    width:98%;
+    float: left;
+    width:35%;
     text-decoration: none;
-}
+}*/
+
+
 
 .inicio{
     width:50%;
@@ -38,8 +69,23 @@ nav#principal{
 
 .botones{
     float:left;
-    width:19.83%;
-    margin-left: -20%;
+    width:30%;
+	min-height:18px;
+    background: rgb(207, 67, 162);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 35px;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin:0px 0px;
+    text-decoration: none;
+    list-style:none;
+}
+
+.botones2{
+    float:left;
+    width:33%;
 	min-height:18px;
     background: rgb(207, 67, 162);
     font-family: 'Times New Roman', Times, serif;
@@ -58,6 +104,39 @@ a .botones:hover{
 }
 
 a .botones:active{
+    background: #00194B;
+}
+
+a .botones2:hover{
+    background:  rgb(4, 226, 255);
+}
+
+a .botones2:active{
+    background: #00194B;
+}
+
+
+
+.botonesF{
+    float:left;
+    width:33%;
+	min-height:18px;
+    background: rgb(67, 207, 102);
+    text-align: center;
+    line-height: 35px;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin:0px 0px;
+    text-decoration: none;
+    list-style:none;
+}
+
+a .botonesF:hover{
+    background:  rgb(4, 226, 255);
+}
+
+a .botonesF:active{
     background: #00194B;
 }
 #volverBtn{
