@@ -11,6 +11,7 @@ if(empty($temp)){
 
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -40,7 +41,17 @@ if(empty($temp)){
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hobby">Hobbys</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nosotros">Historia</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Equipo</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contactanos</a></li>
+
+                        <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contactanos</a></li>-->
+                        <li class="nav-item">
+                            <a class="nav-item dropdown-toggle active nav-link" data-toggle="dropdown" data-target="desplegable" href="#">
+                                Mas
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="nav-link2 js-scroll-trigger" href="#contact">&nbsp&nbsp&nbspContactanos&nbsp&nbsp&nbsp</a>
+                                <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -266,15 +277,24 @@ if(empty($temp)){
                             <h4>Alex SA</h4>
                             <p class="text-muted">CEO</p>
 
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-whatsapp"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://wa.link/3deoa1"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div >
+                            <img alt="" />
+                            <h4></h4>
+                            <p class="text-muted"></p>
+
+                            <a  href="https://wa.link/3deoa1"></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="" />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/3.png" alt="" />
                             <h4>Harvys Perez</h4>
                             <p class="text-muted">CEO</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-whatsapp"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://wa.link/azg1ls"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -287,7 +307,7 @@ if(empty($temp)){
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contactos</h2>
+                    <h2 class="section-heading text-uppercase">Contactanos</h2>
                     <h3 class="section-subheading text-muted">Dinos cualquier duda o sugerencia.</h3>
                 </div>
                 <form id="contactForm" name="sentMessage" novalidate="novalidate">
@@ -298,17 +318,17 @@ if(empty($temp)){
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="email" type="email" placeholder="Tu Correo *" required="required" data-validation-required-message="Please enter your email address." />
+                                <input class="form-control" id="email" type="email" placeholder="Tu Correo *" required="required" data-validation-required-message="Porfavor Introduce Tu Email." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group mb-md-0">
-                                <input class="form-control" id="phone" type="tel" placeholder="Tu Teléfono *" required="required" data-validation-required-message="Please enter your phone number." />
+                                <input class="form-control" id="phone" type="tel" placeholder="Tu Teléfono *" required="required" data-validation-required-message="Porfavor Introduce Tu Telefono." />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" id="message" placeholder="Tu Mensaje *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                <textarea class="form-control" id="message" placeholder="Tu Mensaje *" required="required" data-validation-required-message="Porfavor Introduce Tu Mensaje."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -326,9 +346,9 @@ if(empty($temp)){
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-left">Copyright © I-COM 2020</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://wa.link/3deoa1"><i class="fab fa-instagram"></i></a>
 
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://wa.link/3deoa1"><i class="fab fa-whatsapp"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-right">
                         <a class="mr-3" data-toggle="modal" href="#portfolioModal1">Politica</a>
