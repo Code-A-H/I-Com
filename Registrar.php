@@ -36,14 +36,12 @@ if(isset($_POST["btnRegistrar"]))
 	
 	    if(mysqli_query($conexion,$sqlComands))
 	    {
-		    echo "<script> alert('Usuario registrado con exito: $nombre');  window.location='PerfilConf.html'</script>";
+		    echo "<script> alert('Usuario registrado con exito: $nombre');  window.location='index.html'</script>";
 	    }else 
 	    {
 		    echo "Error: ".$sql."<br>".mysqli_error($conexion);
 	    }
     }
 }
-
-
 
 ?>
