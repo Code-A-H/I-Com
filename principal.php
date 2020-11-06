@@ -10,7 +10,7 @@ if(empty($temp)){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <head>
         <meta charset="utf-8" />
@@ -31,7 +31,7 @@ if(empty($temp)){
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/logo.png" alt="" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
+                    Menú
                     <i class="fas fa-bars ml-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -49,7 +49,7 @@ if(empty($temp)){
                             </a>
                             <div class="dropdown-menu">
                                 <a class="nav-link2 js-scroll-trigger" href="#contact">&nbsp&nbsp&nbspContactanos&nbsp&nbsp&nbsp</a>
-                                <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                                <a class="dropdown-item" href="CerrarSesion.php">Cerrar Sesion</a>
                             </div>
                         </li>
                     </ul>
