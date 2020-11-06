@@ -10,7 +10,7 @@ if(empty($temp)){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <head>
         <meta charset="utf-8" />
@@ -49,7 +49,7 @@ if(empty($temp)){
                             </a>
                             <div class="dropdown-menu">
                                 <a class="nav-link2 js-scroll-trigger" href="#contact">&nbsp&nbsp&nbspContactanos&nbsp&nbsp&nbsp</a>
-                                <a class="dropdown-item" href="#">Cerrar Sesion</a>
+                                <a class="dropdown-item" href="#">Cerrar Sesión</a>
                             </div>
                         </li>
                     </ul>
