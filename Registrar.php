@@ -26,7 +26,7 @@ if(isset($_POST["btnRegistrar"]))
     $sqlVerQ = "SELECT * FROM login WHERE usuario = '$nombre'";
     $sqlVer = mysqli_query($conexion, $sqlVerQ) or die(mysqli_error());
     $sqlVer = mysqli_fetch_array($sqlVer);
-    //if($sqlVer["usuario"] ==  $nombre)
+    
     $text=$sqlVer['usuario'];
     if($text==$nombre){
         echo "<script>alert('Error: el usuario ya existe'); window.location='registrar.html' </script>";
@@ -36,14 +36,12 @@ if(isset($_POST["btnRegistrar"]))
 	
 	    if(mysqli_query($conexion,$sqlComands))
 	    {
-		    echo "<script> alert('Usuario registrado con exito: $nombre');  window.location='PerfilConf.html'</script>";
+		    echo "<script> alert('Usuario registrado con exito: $nombre');  window.location='index.html'</script>";
 	    }else 
 	    {
 		    echo "Error: ".$sql."<br>".mysqli_error($conexion);
 	    }
     }
 }
-
-
 
 ?>
