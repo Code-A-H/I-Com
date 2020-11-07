@@ -4,7 +4,7 @@ $temp = $_SESSION['Usuario'];
 if(empty($temp)){
     echo "<script> alert('Sesion no detectada'); window.location='index.html'</script>";
 }else{
-    echo "<script> alert('Bienbenido $temp'); </script>";
+    echo "<script> alert('Bienvenido $temp'); </script>";
 }
 //echo "<script> alert('$temp');</script>"
 ?>
