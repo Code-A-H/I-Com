@@ -1,10 +1,26 @@
 <?php
 session_start();
-$temp = $_SESSION['Usuario'];
-if(empty($temp)){
+$user = $_SESSION['Usuario'];
+if(empty($user)){
     echo "<script> alert('Sesion no detectada'); window.location='index.html'</script>";
 }else{
-    echo "<script> alert('Bienvenido $temp'); </script>";
+    include("conexion.php");
+    $buscar = $conexion -> query("SELECT * FROM login WHERE usuario	= '$user'");
+    $buscar = mysqli_fetch_array($buscar);
+    $_SESSION['correoIns'] = $buscar["C_Institucional"];
+    $_SESSION['correoEmp'] = $buscar["C_Empresarial"];
+    $buscar = $buscar["CodPerfil"];
+    
+    if(!empty($buscar)){
+        $buscar = $conexion -> query("SELECT * FROM infousuario WHERE idInfo = '$buscar'");
+        $buscar = mysqli_fetch_array($buscar);
+        $_SESSION['nombre'] = $buscar["nombre"];
+        $_SESSION['apellido'] = $buscar["apellido"];
+        $_SESSION['nombre2'] = $buscar["nombre2"];
+        $_SESSION['apellido2'] = $buscar["apellido2"];
+        $_SESSION['telefono'] = $buscar["Telefono"];
+    }
+
 }
 //echo "<script> alert('$temp');</script>"
 ?>
@@ -49,6 +65,7 @@ if(empty($temp)){
                             </a>
                             <div class="dropdown-menu">
                                 <a class="nav-link2 js-scroll-trigger" href="#contact">&nbsp&nbsp&nbspContactanos&nbsp&nbsp&nbsp</a>
+                                <a class="dropdown-item" href="subPag/perfil.php">perfil</a>
                                 <a class="dropdown-item" href="CerrarSesion.php">Cerrar Sesion</a>
                             </div>
                         </li>
@@ -59,7 +76,7 @@ if(empty($temp)){
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Bienvenido A I-COM!</div>
+                <div class="masthead-subheading">Bienvenido A I-COM! <?php echo $_SESSION['nombre']." ".$_SESSION['apellido'] ?></div>
                 <div class="masthead-heading text-uppercase">Un Espacio Solo Para Ti</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Nuestros Servicios</a>
             </div>
@@ -314,7 +331,7 @@ if(empty($temp)){
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input class="form-control" id="name" type="text" placeholder="Tu Nombre *" required="required" data-validation-required-message="Porfavor Introduce Tu Nombre." />
+                                <input class="form-control" id="name" type="text" value = <?php echo $_SESSION['nombre']; ?> required="required" data-validation-required-message="Porfavor Introduce Tu Nombre." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
@@ -322,7 +339,7 @@ if(empty($temp)){
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group mb-md-0">
-                                <input class="form-control" id="phone" type="tel" placeholder="Tu Teléfono *" required="required" data-validation-required-message="Porfavor Introduce Tu Telefono." />
+                                <input class="form-control" id="phone" type="tel" value = <?php echo $_SESSION['telefono']; ?> required="required" data-validation-required-message="Porfavor Introduce Tu Telefono." />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
