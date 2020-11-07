@@ -70,11 +70,124 @@ if(isset($_POST["ver"])){
 }
 
 ?>
+
 <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Datos Iniciales</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login200">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="I-COM-B.gif" alt="Funny image">
+                </div>
+
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" class="login100-form validate-form">
+                    <span class="login100-form-title">
+                        Datos Iniciales
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Se Requiere El Usuario">
+                        <input type="text" style="display: none;" name="user" value="<?php echo $_GET['usuar']; ?>" >
+                        <label style="color:black;" class="let">Seleccione su imagen de perfil: </label>
+                        <input type="file" id="fileImg" name="fileImg"> <br>
+                        <label style="color:black;" class="let">Primer nombre: </label>
+                        <input type="text" id="Nom" name="Nombre" required><p>*</p>
+                        <label style="color:black;" class="let">Segundo nombre: </label>
+                        <input type="text" id="Nom2" name="Nombre2">
+                        <br><br>
+                        <label style="color:black;" class="let">primer apellido: </label>
+                        <input type="text" id="Ape" name="Apellido" required><p>*</p>
+                        <label style="color:black;" class="let">segundo apellido: </label>
+                        <input type="text" id="Ape2" name="Apellido2">
+                        <br><br>
+                        <label style="color:black;" class="let">telefono: </label>
+                        <input type="text" id="tel" name="telefono">
+                        <br><br>
+                        <input class="login100-form-btn" type="submit" value="Actualizar Info" name="actualizarInfo">
+                    </div>
+
+                    <!--<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>-->
+
+                    <div class="text-center p-t-136">
+                        <a class="txt2" href="index.html">
+                            Volver Atras
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+
+
+<!--<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <!--para evitar errores con el cache-->
+            para evitar errores con el cache
         <meta http-equiv="Expires" content="0">
         <meta http-equiv="Last-Modified" content="0">
         <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
@@ -90,9 +203,9 @@ if(isset($_POST["ver"])){
             <img src="I-COM.gif" alt="Funny image"> 
         </div>
         <div class="inner2">
-            <!-- enctype=“multipart/form-data” -->
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
-                <input type="text" style="display: none;" name="user" value="<?php echo $_GET['usuar']; ?>" >
+             enctype=“multipart/form-data” 
+            <form action="" method="POST" enctype="multipart/form-data">
+                <input type="text" style="display: none;" name="user" value="" >
                 <label class="let">Seleccione su imagen de perfil: </label>
                 <input type="file" id="fileImg" name="fileImg"> <br>
                 <label class="let">Primer nombre: </label>
@@ -116,4 +229,4 @@ if(isset($_POST["ver"])){
             </form>
         </div>
     </body>
-</html>
+</html>-->
