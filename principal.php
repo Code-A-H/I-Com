@@ -9,7 +9,8 @@ if(empty($user)){
     $buscar = mysqli_fetch_array($buscar);
     $_SESSION['correoIns'] = $buscar["C_Institucional"];
     $_SESSION['correoEmp'] = $buscar["C_Empresarial"];
-    $buscar = $buscar["CodPerfil"];
+    $_SESSION['CodPerfil'] = $buscar["CodPerfil"];
+    $buscar = $_SESSION['CodPerfil'];
     
     if(!empty($buscar)){
         $buscar = $conexion -> query("SELECT * FROM infousuario WHERE idInfo = '$buscar'");
@@ -20,7 +21,7 @@ if(empty($user)){
         $_SESSION['apellido2'] = $buscar["apellido2"];
         $_SESSION['telefono'] = $buscar["Telefono"];
     }
-
+    $conexion -> close();
 }
 //echo "<script> alert('$temp');</script>"
 ?>

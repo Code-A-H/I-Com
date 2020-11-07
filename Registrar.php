@@ -43,5 +43,5 @@ if(isset($_POST["btnRegistrar"]))
 	    }
     }
 }
-
+$conexion -> close();
 ?>
