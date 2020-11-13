@@ -37,7 +37,6 @@ if(isset($_POST["btnIngresar"]))
 		echo "<script> alert('Usuario o contraseña incorrectos'); window.location='index.html' </script>";
     }///y
 
-}else{
-    //
 }
+$conexion -> close();
 ?>

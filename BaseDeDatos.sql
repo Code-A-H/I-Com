@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2020 a las 22:41:00
+-- Tiempo de generación: 14-11-2020 a las 00:42:17
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -92,7 +92,7 @@ ALTER TABLE `profile_pictures`
 -- AUTO_INCREMENT de la tabla `profile_pictures`
 --
 ALTER TABLE `profile_pictures`
-  MODIFY `ImgCodigo` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `ImgCodigo` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
