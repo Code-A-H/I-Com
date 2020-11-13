@@ -32,9 +32,11 @@ if(isset($_POST["actualizarInfo"])){
         $insertar = $conexion -> query("INSERT into profile_pictures(nombre,extension,archivo)
         values('iconoPerfil_default','image/png','$archivo')");
         if($insertar){
-            $insertar = mysqli_query($conexion, "SELECT * FROM profile_pictures WHERE nombre = 'iconoPerfil_default'");
+            //iconoPerfil_default
+            $insertar = mysqli_query($conexion, "SELECT MAX(ImgCodigo) AS ImgCodigo FROM profile_pictures GROUP BY date(ImgCodigo)");
             $insertar = mysqli_fetch_array($insertar);
             $ImgCod = $insertar["ImgCodigo"];
+            //echo("<script> alert('$ImgCod') </script>");
             $insertar = $conexion -> query("UPDATE login SET CodPerfil = '$ImgCod' WHERE usuario = '$user'");
             
         }
@@ -59,7 +61,7 @@ if(isset($_POST["actualizarInfo"])){
 	$queri = "UPDATE login SET EstadoDeConexion = '$est' WHERE usuario = '$user'";
     $conexion -> query($queri);
     //
-    $_SESSION['Usuario'] = $nombre;
+    $_SESSION['Usuario'] = $user;
     //
     echo("<script> window.location='principal.php'</script>");
     exit;
@@ -68,7 +70,7 @@ if(isset($_POST["ver"])){
     //echo("<script> alert('nice'); window.location='PerfilConf.html'</script>");
 
 }
-
+$conexion -> close();
 ?>
 
 <!DOCTYPE html>
