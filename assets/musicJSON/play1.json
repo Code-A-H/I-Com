@@ -1,0 +1,84 @@
+[
+    {
+        "id":1,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny",
+        "nombre" : "Si Ella Sale",
+        "url":"assets/music/play1/t1.mp3",
+        "duracion":223
+    },
+    {
+        "id":2,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny Ft. Zion & Lennox",
+        "nombre" : "Más De Una Cita",
+        "url":"assets/music/play1/t2.mp3",
+        "duracion":303
+    },
+    {
+        "id":3,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny",
+        "nombre" : "Bye Me Fui",
+        "url":"assets/music/play1/t3.mp3",
+        "duracion":258
+    },
+    {
+        "id":4,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny Ft. Yandel",
+        "nombre" : "Canción De Yandel",
+        "url":"assets/music/play1/t4.mp3",
+        "duracion":329
+    },
+    {
+        "id":5,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny Ft. Don Omar",
+        "nombre" : "Pa’ Romperla",
+        "url":"assets/music/play1/t5.mp3",
+        "duracion":314
+    },
+    {
+        "id":6,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny Ft. Nicky Jam",
+        "nombre" : "Bad Con Nicky",
+        "url":"assets/music/play1/t6.mp3",
+        "duracion":"322"
+    },
+    {
+        "id":7,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny",
+        "nombre" : "Bendiciones",
+        "url":"assets/music/play1/t7.mp3",
+        "duracion":"235"
+    },
+    {
+        "id":8,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny Ft. Jhay Cortez",
+        "nombre" : "Como Se Siente (Remix)",
+        "url":"assets/music/play1/t8.mp3",
+        "duracion":"347"
+    },
+    {
+        "id":9,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny",
+        "nombre" : "Ronca (Freestyle)",
+        "url":"assets/music/play1/t9.mp3",
+        "duracion":"230"
+    },
+    {
+        "id":10,
+        "playlist":"estudiar",
+        "artista":"Bad Bunny Ft. Gabriela",
+        "nombre" : "En Casa",
+        "url":"assets/music/play1/t10.mp3",
+        "duracion":"256"
+    }
+
+
+]
