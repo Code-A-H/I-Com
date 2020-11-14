@@ -66,7 +66,7 @@ if(empty($user)){
                             </a>
                             <div class="dropdown-menu">
                                 <a class="nav-link2 js-scroll-trigger" href="#contact">&nbsp&nbsp&nbspContactanos&nbsp&nbsp&nbsp</a>
-                                <a class="dropdown-item" href="subPag/perfil.php">perfil</a>
+                                <a class="dropdown-item" href="perfil.php">perfil</a>
                                 <a class="dropdown-item" href="CerrarSesion.php">Cerrar Sesion</a>
                             </div>
                         </li>

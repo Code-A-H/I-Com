@@ -26,7 +26,7 @@ if(isset($_POST["actualizarInfo"])){
         }
         
     }else{
-        $archivo = addcslashes(file_get_contents('iconoPerfil_default.png'));
+        $archivo = real_escape_string(file_get_contents('iconoPerfil_default.png'));
         $user = $_POST["user"];
 
         $insertar = $conexion -> query("INSERT into profile_pictures(nombre,extension,archivo)
