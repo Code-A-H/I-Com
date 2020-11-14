@@ -9,12 +9,11 @@ $buscarBD = $conexion -> query("SELECT * FROM profile_pictures WHERE ImgCodigo =
 $buscar = mysqli_fetch_array($buscarBD);
 $imgNom = $buscar["nombre"];
 if($imgNom == "iconoPerfil_default"){
-    //echo "<script> alert('ok') </script>";
     $_SESSION['a'] = $imgNom.".png";
 }else{
     $_SESSION['a'] = "verImagenes.php";
 }
-
+$conexion -> close();
 ?>
 
 <!DOCTYPE html>
