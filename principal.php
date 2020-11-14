@@ -187,25 +187,25 @@ if(empty($user)){
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/01-thumbnail.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/banner-musica.jpg" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Musica</div>
-                                <div class="portfolio-caption-subheading text-muted">Disfruta tu musica favorita</div>
+                                <div class="portfolio-caption-subheading text-muted">Disfruta tu musica en I-COM MUSIC!</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                            <a class="portfolio-link" href="juegos.html">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/02-thumbnail.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/banner-juegos.jpg" alt="" />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-heading">Juegos</div>
+                                <div class="portfolio-caption-subheading text-muted">Diviertete jugando en I-COM GAMES!</div>
                             </div>
                         </div>
                     </div>
