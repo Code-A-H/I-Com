@@ -12,11 +12,11 @@ session_start();
         <link href="perf.css" rel="stylesheet" />
     </head>
     <body>
-        <img src="" >
+        
         <div>
             <h2>visualizacion del perfil</h2><br>
             <form>
-                <img src= <?php echo $_SESSION['perfFoto'] ?> ><br>
+                <img width="500px" height="300px" src= <?php echo $_SESSION['perfFoto'] ?> ><br>
                 <label>nombre de usuario: </label>
                 <input type="text" value = <?php echo $_SESSION['Usuario']; ?> >
                 <br>
