@@ -1,19 +1,6 @@
 <?php 
 session_start();
 
-include("conexion.php");
-
-$CP = $_SESSION['CodPerfil'];
-
-$buscarBD = $conexion -> query("SELECT * FROM profile_pictures WHERE ImgCodigo = '$CP'");
-$buscar = mysqli_fetch_array($buscarBD);
-$imgNom = $buscar["nombre"];
-if($imgNom == "iconoPerfil_default"){
-    $_SESSION['a'] = $imgNom.".png";
-}else{
-    $_SESSION['a'] = "verImagenes.php";
-}
-$conexion -> close();
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +16,7 @@ $conexion -> close();
         <div>
             <h2>visualizacion del perfil</h2><br>
             <form>
-                <img src= <?php echo $_SESSION['a'] ?> >
+                <img src= <?php echo $_SESSION['perfFoto'] ?> ><br>
                 <label>nombre de usuario: </label>
                 <input type="text" value = <?php echo $_SESSION['Usuario']; ?> >
                 <br>

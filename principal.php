@@ -10,16 +10,26 @@ if(empty($user)){
     $_SESSION['correoIns'] = $buscar["C_Institucional"];
     $_SESSION['correoEmp'] = $buscar["C_Empresarial"];
     $_SESSION['CodPerfil'] = $buscar["CodPerfil"];
-    $buscar = $_SESSION['CodPerfil'];
+    $CP = $_SESSION['CodPerfil'];
     
     if(!empty($buscar)){
-        $buscar = $conexion -> query("SELECT * FROM infousuario WHERE idInfo = '$buscar'");
+        $buscar = $conexion -> query("SELECT * FROM infousuario WHERE idInfo = '$CP'");
         $buscar = mysqli_fetch_array($buscar);
         $_SESSION['nombre'] = $buscar["nombre"];
         $_SESSION['apellido'] = $buscar["apellido"];
         $_SESSION['nombre2'] = $buscar["nombre2"];
         $_SESSION['apellido2'] = $buscar["apellido2"];
         $_SESSION['telefono'] = $buscar["Telefono"];
+        //
+        $fotoBD = $conexion -> query("SELECT * FROM profile_pictures WHERE ImgCodigo = '$CP'");
+        $foto = mysqli_fetch_array($fotoBD);
+        $imgNom = $foto["nombre"];
+        //echo "<script> alert('$CP'); </script>";
+        if($imgNom == "iconoPerfil_default"){
+            $_SESSION['perfFoto'] = $imgNom.".png";
+        }else{
+            $_SESSION['perfFoto'] = "verImagenes.php";
+        }
     }
     $conexion -> close();
 }

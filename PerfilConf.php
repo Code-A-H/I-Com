@@ -12,6 +12,10 @@ if(isset($_POST["actualizarInfo"])){
         //echo "<script> alert('$user');</script>";
         //
         $perfil_FotoData = addslashes(file_get_contents($perfil_FotoTMP));
+        //
+        $perfil_Foto = substr_replace($perfil_Foto, $user, 4, -1);
+        echo "<script> alert('$perfil_Foto') </script>";
+        //
         $insertar = $conexion -> query("INSERT into profile_pictures(nombre,extension,archivo) 
         values('$perfil_Foto','$perfil_Foto_Tipo','$perfil_FotoData')");
         if($insertar){
